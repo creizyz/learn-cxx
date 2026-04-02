@@ -112,3 +112,23 @@ int main() {
 ```
 
 **Question**: This code tries to swap two numbers. Why does it fail ? Fix it.
+
+## Exercise F
+
+```cpp
+#include <iostream>
+
+void increment(const int & x) {
+    x = x + 1;
+}
+
+int main() {
+    int value = 10;
+
+    increment(value);
+
+    std::cout << value << "\n";
+}
+```
+
+**Question**: This code won't compile. Why ? Can you fix it ?
