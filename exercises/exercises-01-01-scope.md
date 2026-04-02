@@ -1,4 +1,4 @@
-## Exercise 01
+## Exercise A
 
 ```cpp
 #include <iostream>
@@ -17,7 +17,7 @@ int main() {
 
 **Question**: what does this program print, and why ?
 
-## Exercise 02
+## Exercise B
 
 ```cpp
 #include <iostream>
@@ -33,7 +33,7 @@ int main() {
 
 **Question**: this program won't compile. Why ? How do you fix it ?
 
-## Exercise 03
+## Exercise C
 
 ```cpp
 #include <iostream>
@@ -49,7 +49,7 @@ int main() {
 
 **Question**: this program won't compile. What do you think the programmer wanted this program to do ? Why won't this program compile ? How can you fix it ?
 
-## Exercise 04
+## Exercise D
 
 ```cpp
 #include <iostream>
