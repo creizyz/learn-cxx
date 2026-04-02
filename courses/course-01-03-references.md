@@ -32,3 +32,6 @@ When passing by reference:
 ## Const or not const
 
 The **```const``` qualifier** can be used to express if you want to access some data:
+
+* as inputs / read only (**&**);
+* as inputs or outputs / read and write (**const &**).
