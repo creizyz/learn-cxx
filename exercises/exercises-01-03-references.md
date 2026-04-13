@@ -16,6 +16,15 @@ int main() {
 
 **Question**: What does this print, and why ?
 
+* Réponse : 
+& pour réference
+donc j'imagine que la nouvelle variable ref = reférence vers x
+donc modifier ref c'est modifier a
+```cpp
+25
+25
+```
+
 ## Exercise B
 
 ```cpp
@@ -33,6 +42,11 @@ int main() {
 ```
 
 **Question**: What does this print, and why ?
+* Réponse : 
+on passe la réf de n à la fnction, donc c'est ce que la fonction modifie
+```cpp
+6
+```
 
 ## Exercise C
 
@@ -60,6 +74,17 @@ int main() {
 ```
 
 **Question**: What does this print, and why ?
+
+* Réponse : 
+Pour by value la fonction set à 0 une fonction temporaire propre à son scope
+et elle n'est jamais réasigné à la variable d'entrée
+par ref, la fonction modifie directement la valeur de la référence déclarée dans main
+```cpp
+8
+0
+```
+
+
 
 ## Exercise D
 
@@ -89,6 +114,14 @@ int main() {
 ```
 
 **Question**: What does this print, and why ?
+* Réponse :  Changevalue assigne 10 à une variable x, mais n'est pas retournée, donc temp vaut toujours la même chose.
+Tandis que changeReference assigne 200 à la référence de la variable x
+```cpp
+10
+200
+```
+
+
 
 ## Exercise E
 
@@ -113,6 +146,25 @@ int main() {
 
 **Question**: This code tries to swap two numbers. Why does it fail ? Fix it.
 
+* Réponse : les variables swap a et b ne sont jamais retournées/utilisées.
+
+```cpp
+void swapNumbers(int & a, int & b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int x = 3;
+    int y = 7;
+
+    swapNumbers(x, y);
+
+    std::cout << x << " " << y << "\n";
+}
+```
+
 ## Exercise F
 
 ```cpp
@@ -132,3 +184,23 @@ int main() {
 ```
 
 **Question**: This code won't compile. Why ? Can you fix it ?
+
+* Réponse : 
+"const" protège la référence de x en écriture.
+```cpp
+#include <iostream>
+
+void increment(int & x) {
+    x = x + 1;
+}
+
+int main() {
+    int value = 10;
+
+    increment(value);
+
+    std::cout << value << "\n";
+}
+```
+
+
